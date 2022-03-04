@@ -9,18 +9,22 @@ and returns the proper amount of points that goes with the level.
 """
 
 
+# function to use switch case
 def switch_level(level_chosen):
-    levels ={
+    # dictionary switch/case
+    levels = {
         'N': 50,
         'B': 150,
         'E': 300,
         'A': 500}
+    # return result                 # default if users input does not exist
     return levels.get(level_chosen, 'That Difficulty level does not exist')
 
 
-# Press the green button in the gutter to run the script.
+# main to call function
 if __name__ == '__main__':
     print('Choose the game difficulty:\nN for Novice\nB for Beginner\nE for Experienced\nA for Advanced')
+    # prompts user input
     chosen_level = input('Choose a difficulty: ').upper()
     print(f'The points awarded for the chosen difficulty is: ', switch_level(chosen_level))
 
